@@ -15,4 +15,4 @@ aspoň 2 objednávky. Názvy tabuliek a stĺpcov ako aj ich prepojenia sú ponec
 Riešenie pri tabuľke, ktorá obsahuje nasledujúce údaje: Id (PK), meno, priezvisko, vek, dátum objednávky by bolo.
 
 
-<b>select first_name, last_name, age from tast where age >= 24 and age <= 35 and extract(month from age(now(),dates)) <= 3 group by(first_name, last_name, age) having count(*) >= 2;<b/>
+<b>SELECT first_name, last_name, age FROM orders WHERE age >= 24 AND age <= 35 AND EXTRACT(MONTH FROM AGE(NOW(),dates)) <= 3 GROUP BY(first_name, last_name, age) HAVING count(*) >= 2;<b/>
