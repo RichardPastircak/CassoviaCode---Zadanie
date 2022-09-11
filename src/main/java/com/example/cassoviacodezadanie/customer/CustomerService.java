@@ -42,8 +42,13 @@ public class CustomerService {
             throw new IllegalStateException("Customer with id " + customerId + " doesn't exist. I can't delete him.");
         }
         Customer deletedCustomer = customerOptional.get();
-        deleteConnections(deletedCustomer);
-//        customerRepository.deleteById(customerId);
+
+        if (deletedCustomer.getProducts().size() > 0){
+            deleteConnections(deletedCustomer);
+        }
+        else {
+            customerRepository.deleteById(customerId);
+        }
     }
 
     public void deleteConnections(Customer customer){
@@ -53,6 +58,7 @@ public class CustomerService {
                 orderIterator.remove();
                 orderRepository.delete(order);
             }
+            productRepository.delete(product);
         }
     }
 }

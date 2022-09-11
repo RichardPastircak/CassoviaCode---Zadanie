@@ -102,9 +102,7 @@ public class Order {
     public void setProductsInOrder(Set<Product> products) {
         this.productsInOrder = products;
     }
-
     //To String
-
     @Override
     public String toString() {
         return "Order{" +
@@ -113,7 +111,7 @@ public class Order {
                 ", priceModifier=" + priceModifier +
                 ", description='" + description + '\'' +
                 ", orderCreator=" + orderCreator +
-                ", products=" + productsInOrder +
+                ", productsInOrder=" + productsInOrder +
                 '}';
     }
 

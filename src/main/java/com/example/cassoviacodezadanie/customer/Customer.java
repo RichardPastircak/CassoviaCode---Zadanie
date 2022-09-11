@@ -93,6 +93,14 @@ public class Customer {
         this.products = products;
     }
 
+    public Set<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Set<Order> orders) {
+        this.orders = orders;
+    }
+
     //To String
 
     @Override
@@ -102,7 +110,8 @@ public class Customer {
                 ", login='" + login + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", products=" + products +
+                ", orders=" + orders +
                 '}';
     }
-
 }

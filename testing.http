@@ -10,11 +10,11 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8080/api/customer/1
+DELETE http://localhost:8080/api/customer/5
 
 #Products
 ###
-POST http://localhost:8080/api/product?customerId=1
+POST http://localhost:8080/api/product?customerId=5
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 
 #Orders
 ###
-POST http://localhost:8080/api/order?customerId=1&productId=3
+POST http://localhost:8080/api/order?customerId=5&productId=3
 Content-Type: application/json
 
 {
